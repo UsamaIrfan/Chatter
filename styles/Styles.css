@@ -1,0 +1,145 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+:root {
+    --clr-main: #22252A;
+    --clr-accent: #83BB2D;
+    --clr-mainLight: #696A6C;
+    --clr-accentLight: #5F842F;
+    --clr-error: #F75656;
+}
+
+body {
+    padding:0;
+    margin:0;
+    background: var(--clr-main);
+    color: var(--clr-accent);
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 10vh;
+    font-size: 1.5rem;
+    padding: 0 1em;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--clr-accent);
+    animation: FadeInLeft .3s ease-in;
+}
+
+nav a:hover, nav a:focus {
+    
+}
+
+.container {
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form input {
+    background: transparent;
+    border: none;
+    border-bottom: 3px solid var(--clr-accent);
+    padding: 15px 25px;
+    font-size: 1.5rem;
+    margin-bottom: 1em;
+    color: var(--clr-mainLight);
+    transition: all .3s ease;
+}
+
+.form input:focus {
+    border-bottom: 3px solid transparent;
+    border-left: 4px solid var(--clr-accent);
+    transform: scale(1.05);
+}
+
+.form p {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.form button {
+    background: var(--clr-accent);
+    border: none;
+    color: var(--clr-main);
+    padding: 15px 25px;
+    border: 2px solid var(--clr-accent);
+    font-size: 1.5rem;
+    transition: all .3s ease;
+    margin-bottom: .5em;
+}
+
+.form button#facebook, .form button#google {
+    color: var(--clr-accent);
+    background: transparent;
+}
+
+.form button#facebook:focus, .form button#google:focus, .form button#facebook:hover, .form button#google:hover {
+    border: none;
+    border-top: transparent 2px solid;
+    border-bottom: transparent 2px solid;
+    border-left: 4px solid var(--clr-accent);
+    border-right: 4px solid var(--clr-accent);
+}
+
+.form button:hover {
+    background: var(--clr-accentLight);
+}
+
+.form button:focus {
+    border: 2px solid var(--clr-accent);
+    color: var(--clr-accent);
+    background: transparent;
+}
+
+.form *:focus {
+    outline: none;
+}
+
+.hidden {
+    display: none;
+}
+
+#error {
+    color: var(--clr-error);
+    border-left: 4px solid var(--clr-error);
+    padding: 10px 10px;
+    font-size: 1.5rem;
+    margin: 3em;
+}
+
+@media screen and (max-width: 480px) {
+
+    .form input  {
+        font-size: 1rem;
+        padding: 10px 15px;
+    }
+}
+
+@keyframes FadeInLeft {
+    0% {
+        transform: translateX(-300px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

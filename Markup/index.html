@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatter</title>
+    <link rel="stylesheet" href="../styles/Styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-auth.js"></script>
+
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-analytics.js"></script>
+
+</head>
+<body>
+    <nav>
+      <a href="#">Chatter</a>
+    </nav>
+    <div class="container">
+      <form id="form" class="form">
+        <p>Log into Chatter</p>
+        <input type="email" autocomplete="off" name="email" id="email" placeholder="Email">
+        <input type="password" name="password" id="password" placeholder="Password">
+        <button type="submit" onclick="login()">Login</button>
+        <button type="submit" id="facebook" onclick="fbAuth()">Login With Facebook</button>
+        <button type="submit" id="google" onclick="googleAuth()">Login With Google</button>
+      </form>
+      <div id="error" class="hidden">yup</div>
+    </div>
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+          apiKey: "AIzaSyDXJ9EsY1s1xpeKwC7RoiOWYGSKFLmPecU",
+          authDomain: "chatter-beb7d.firebaseapp.com",
+          databaseURL: "https://chatter-beb7d.firebaseio.com",
+          projectId: "chatter-beb7d",
+          storageBucket: "chatter-beb7d.appspot.com",
+          messagingSenderId: "472374453398",
+          appId: "1:472374453398:web:cacfb9d45ebf456d1f0eb7",
+          measurementId: "G-L3TKNM349B"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+      </script>
+      <script src="../Scripts/app.js"></script>
+</body>
+</html>
