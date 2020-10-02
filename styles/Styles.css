@@ -130,6 +130,10 @@ nav a:hover, nav a:focus {
         font-size: 1rem;
         padding: 10px 15px;
     }
+    
+    #error {
+        font-size: 1rem;
+    }
 }
 
 @keyframes FadeInLeft {
